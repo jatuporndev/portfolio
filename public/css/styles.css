@@ -11435,3 +11435,17 @@ footer.footer .social-link:hover {
     height: 50px;
     width: 50px;
 }
+
+.skilltext {
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: #FFC3FE;
+    padding: 10px 18px 10px 18px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    margin-top: 5px;  
+    display: inline-flex;
+  
+    
+}
+
