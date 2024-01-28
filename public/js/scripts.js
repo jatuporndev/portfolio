@@ -79,11 +79,15 @@ function fadeIn(el, display) {
     })();
 };
 
+function _calculateAge(birthday) { // birthday is a date
+    var ageDifMs = Date.now() - birthday.getTime();
+    var ageDate = new Date(ageDifMs); // miliseconds from epoch
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+}
+
+
 //calculate age
 var dob = new Date("08/17/1999");  
-var month_diff = Date.now() - dob.getTime();   
-var age_dt = new Date(month_diff);      
-var year = age_dt.getUTCFullYear();  
-var age = Math.abs(year - 1970);  
-document.getElementById("myage").innerHTML =String(age);
+var age = _calculateAge(dob);
+document.getElementById("myage").innerHTML = String(age);
 
